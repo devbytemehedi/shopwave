@@ -32,9 +32,9 @@
     <link rel="stylesheet" href="../dist/style.css" />
   </head>
 
-  <body class="font-montserrat">
+  <body class="font-montserrat text-[#28011e]">
     <header>
-      <div class="navbar bg-[#F9F6E2] px-8 md:px-14 lg:px-24">
+      <div class="navbar bg-[#fff5fc] px-8 md:px-14 lg:px-24">
         <div class="flex-1">
           <a href="./main.html"
             ><img
@@ -47,14 +47,14 @@
           <div class="form-control">
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Search in Shopwave"
               class="input w-24 md:w-full h-10 border-gray-200 focus:border-[#E527B2] focus:outline-none hidden md:block rounded-lg"
             />
           </div>
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
-                <img src="./assets/img/user.png" />
+                <img src="./assets/img/user.svg" />
               </div>
             </label>
             <ul
@@ -74,21 +74,20 @@
         </div>
       </div>
       <div
-        class="banner bg-[#F9F6E2] px-8 md:px-14 lg:px-24 flex items-center justify-center py-10"
+        class="banner bg-[#fff5fc] px-8 md:px-14 lg:px-24 flex items-center md:justify-between lg:justify-center py-10"
       >
-        <div class="banner-text text-center">
-          <h3 class="text-[#111] font-medium text-xl md:text-2xl lg:text-3xl">
+        <div class="banner-text text-center w-fit">
+          <h3 class="font-medium text-xl md:text-2xl lg:text-3xl">
             ---SALE FEVER---
           </h3>
-          <h1
-            class="text-[#111] font-bold text-3xl md:text-4xl lg:text-6xl my-5"
-          >
+          <h1 class="font-bold text-3xl md:text-4xl lg:text-6xl my-5">
             Purchase TK 200 or above &amp; get
             <span class="text-[#E527B2]">20% off</span>
           </h1>
           <div class="coupon flex gap-2 items-center justify-center">
-            <p class="text-[#111] font-medium text-2xl">Use Promo Code</p>
+            <p class="font-medium text-2xl">Use Promo Code</p>
             <button
+              id="coupon-code"
               class="btn bg-[#E527B2] border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-[#b31589]"
             >
               SELL200
@@ -104,17 +103,21 @@
       class="px-8 md:px-14 lg:px-24 bg-[#F8F8F8] flex items-start justify-center gap-10"
     >
       <div class="cards py-24">
-        <h3 class="text-[#111] font-semibold text-4xl my-10">Kitchenware</h3>
+        <h3 class="font-semibold text-4xl my-10">Kitchenware</h3>
         <div
           class="card-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 1 -->
+          <div
+            id="cardOne"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod1.png" alt="item" class="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -143,17 +146,23 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">K. Accessories</h2>
-              <p class="text-xl opacity-50 text-[#111]">39.00 TK</p>
+              <h2 id="cardOne-Title" class="card-title">K. Accessories</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardOne-Price" class="card-price">39.00</span> TK
+              </p>
             </div>
           </div>
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 2 -->
+          <div
+            id="cardTwo"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod2.png" alt="item" class="rounded-lg" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -182,17 +191,23 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">K. Accessories</h2>
-              <p class="text-xl opacity-50 text-[#111]">25.00 TK</p>
+              <h2 id="cardTwo-Title" class="card-title">K. Accessories</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardTwo-Price" class="card-price">25.00</span> TK
+              </p>
             </div>
           </div>
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 3 -->
+          <div
+            id="cardThree"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod3.png" alt="item" class="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -221,22 +236,28 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">Home Cooker</h2>
-              <p class="text-xl opacity-50 text-[#111]">49.00 TK</p>
+              <h2 id="cardThree-Title" class="card-title">Home Cooker</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardThree-Price" class="card-price">49.00</span> TK
+              </p>
             </div>
           </div>
         </div>
-        <h3 class="text-[#111] font-semibold text-4xl my-10">Sportswear</h3>
+        <h3 class="font-semibold text-4xl my-10">Sportswear</h3>
         <div
           class="card-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 4 -->
+          <div
+            id="cardFour"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod4.png" alt="item" class="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -265,17 +286,23 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">Sports Back Cap</h2>
-              <p class="text-xl opacity-50 text-[#111]">49.00 TK</p>
+              <h2 id="cardFour-Title" class="card-title">Sports Back Cap</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardFour-Price" class="card-price">49.00</span> TK
+              </p>
             </div>
           </div>
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 5 -->
+          <div
+            id="cardFive"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod5.png" alt="item" class="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -304,17 +331,23 @@
                   checked
                 />
               </div>
-              <h2 class="card-title">Full Jersey Set</h2>
-              <p class="text-xl opacity-50 text-[#111]">69.00 TK</p>
+              <h2 id="cardFive-Title" class="card-title">Full Jersey Set</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardFive-Price" class="card-price">69.00</span> TK
+              </p>
             </div>
           </div>
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 6 -->
+          <div
+            id="cardSix"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod6.png" alt="item" class="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -343,22 +376,28 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">Sports cates</h2>
-              <p class="text-xl opacity-50 text-[#111]">159.00 TK</p>
+              <h2 id="cardSix-Title" class="card-title">Sports cates</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardSix-Price" class="card-price">159.00</span> TK
+              </p>
             </div>
           </div>
         </div>
-        <h3 class="text-[#111] font-semibold text-4xl my-10">Furniture</h3>
+        <h3 class="font-semibold text-4xl my-10">Furniture</h3>
         <div
           class="card-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 7 -->
+          <div
+            id="cardSeven"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod7.png" alt="item" class="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -387,17 +426,25 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">Single Relax Chair</h2>
-              <p class="text-xl opacity-50 text-[#111]">185.00 TK</p>
+              <h2 id="cardSeven-Title" class="card-title">
+                Single Relax Chair
+              </h2>
+              <p class="text-xl opacity-50">
+                <span id="cardSeven-Price" class="card-price">185.00</span> TK
+              </p>
             </div>
           </div>
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 8 -->
+          <div
+            id="cardEight"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod8.png" alt="item" class="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -426,17 +473,23 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">Children play</h2>
-              <p class="text-xl opacity-50 text-[#111]">299.00 TK</p>
+              <h2 id="cardEight-Title" class="card-title">Children play</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardEight-Price" class="card-price">299.00</span> TK
+              </p>
             </div>
           </div>
-          <div class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg">
+          <!-- Card 9 -->
+          <div
+            id="cardNine"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
             <figure
               class="px-5 pt-10 pb-5 bg-[#F8F8F8] rounded-lg w-[215px] h-[210px]"
             >
               <img src="./assets/img/prod9.png" alt="item" class="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center cursor-pointer">
+            <div class="card-body items-center text-center">
               <div class="rating">
                 <input
                   type="radio"
@@ -465,55 +518,91 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <h2 class="card-title">Flexible Sofa</h2>
-              <p class="text-xl opacity-50 text-[#111]">339.00 TK</p>
+              <h2 id="cardNine-Title" class="card-title">Flexible Sofa</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardNine-Price" class="card-price">339.00</span>0 TK
+              </p>
             </div>
           </div>
         </div>
       </div>
       <div class="cart mt-[13.6rem] bg-[#F8F8F8] rounded-lg">
-        <div class="coupon p-10 mb-5 bg-white rounded-lg">
-          <h3 class="text-[#111] font-medium text-2xl my-3">Have coupon?</h3>
+        <!-- Coupon -->
+        <div class="coupon p-5 mb-5 bg-white rounded-lg shadow-xl">
+          <h3 class="font-medium text-2xl my-3">Have coupon?</h3>
           <div class="button flex relative">
             <input
+              id="input-coupon"
               type="text"
               placeholder="Coupon code"
-              class="input w-full max-w-xs h-10 rounded-r-none border-gray-200 focus:border-[#E527B2] focus:outline-none"
+              class="input w-44 h-10 rounded-r-none border-gray-200 focus:border-[#E527B2] focus:outline-none"
             />
             <button
-              class="btn border-none text-white bg-[#E527B2] min-h-[2.5rem] h-10 rounded-l-none hover:bg-[#b31589]"
+              id="btn-coupon"
+              class="btn border-none text-white bg-[#E527B2] min-h-[2.5rem] h-10 rounded-l-none hover:bg-[#b31589] disabled:text-[#E527B2] disabled:opacity-50"
+              disabled
             >
               Apply
             </button>
           </div>
         </div>
-        <div class="checkout p-5 bg-white rounded-lg grid grid-cols-1">
-          <ol>
-            <li class="my-3 font-semibold">1.Home Cooker</li>
-            <li class="my-3 font-semibold">2.Sports cates</li>
-            <li class="my-3 font-semibold">3.Children play</li>
+        <!-- Checkout -->
+        <div
+          class="checkout p-5 bg-white rounded-lg grid grid-cols-1 shadow-xl w-fit"
+        >
+          <h3 class="font-medium text-2xl mb-3">
+            <i class="fa-solid fa-cart-shopping"></i> ShopList
+          </h3>
+          <ol id="item-list" class="list-inside list-decimal">
+            <!-- <li class="font-medium my-2">Home Cooker</li> -->
           </ol>
-          <hr class="my-3 text-black" />
+          <hr class="my-3" />
           <p class="my-3 font-semibold" text-black>
             Total Price:
-            <span id="total-price" class="text-[#111] opacity-50">299.00</span
-            ><span class="text-[#111] opacity-50"> TK</span>
+            <span id="total-price" class="opacity-50">00</span
+            ><span class="opacity-50"> TK</span>
           </p>
           <p class="my-3 font-semibold" text-black>
             Discount:
-            <span id="discount" class="text-[#111] opacity-50">299.00</span
-            ><span class="text-[#111] opacity-50"> TK</span>
+            <span id="discount" class="opacity-50">00</span
+            ><span class="opacity-50"> TK</span>
           </p>
           <p class="my-3 font-semibold" text-black>
-            Total: <span id="total" class="text-[#111] opacity-50">299.00</span
-            ><span class="text-[#111] opacity-50"> TK</span>
+            Total:
+            <span id="total" class="opacity-50">00</span
+            ><span class="opacity-50"> TK</span>
           </p>
           <hr class="my-3 text-black" />
           <button
-            class="btn btn-wide bg-[#E527B2] border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-[#b31589] capitalize"
+            id="btn-buy"
+            class="btn btn-wide bg-[#E527B2] border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-[#b31589] capitalize disabled:text-[#E527B2] disabled:opacity-50"
+            disabled
           >
             Make Purchase
           </button>
+          <dialog id="purchase-modal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box card">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./assets/img/congo.png"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title font-bold text-5xl">Congratulations</h2>
+                <p class="opacity-50 text-xl my-5">Your Purchase is complete</p>
+                <div class="card-actions">
+                  <button
+                  id="btn-home"
+                    class="btn bg-[#E527B2] border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-[#b31589]"
+                  >
+                    Go Home
+                  </button>
+                </div>
+              </div>
+            </form>
+          </dialog>
         </div>
       </div>
     </main>
