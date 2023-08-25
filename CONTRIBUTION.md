@@ -15,8 +15,8 @@ If you're new here, we're excited to have you! Please follow the steps below to 
 
 ### ✅ Note
 
-> - **`HTML`** and **`JAVASCRIPT`** files are formatted using prettier.
-> - we are using **`Tailwind Framework`** for our **`CSS`**.
-> - **`CSS`** are generate **`tailwind build`** script
+> - **HTML** and **JAVASCRIPT** files are formatted using prettier.
+> - we are using **Tailwind Framework** for our **CSS**.
+> - **CSS** are generate `tailwind build` script
 
 #### This Project is only for educational purpose
