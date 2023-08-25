@@ -106,3 +106,7 @@ function calculateDiscountPrice(
     finalPriceElement.innerText = finalPrice.toFixed(2);
   });
 }
+
+const copyDiscountCodeButton = async (event) => {
+  navigator.clipboard.writeText(event.target.innerText);
+}
