@@ -37,8 +37,8 @@
 
   <body class="font-montserrat text-blackish">
     <header class="bg-whitish">
-      <div class="navbar px-8 md:px-14 lg:px-24">
-        <div class="flex-1">
+      <div class="navbar px-8 md:px-14 lg:px-24 justify-center">
+        <div class="md:flex-1">
           <a href="./main.html"
             ><img
               class="w-40 md:w-52"
@@ -60,10 +60,10 @@
               <!-- Search -->
             </button>
           </div>
-          <div class="cursor-pointer mx-3">
+          <div class="cursor-pointer mx-3 hidden md:block">
             <img src="./assets/img/cart.svg" class="w-10 hover:fill-main" />
           </div>
-          <div class="dropdown dropdown-end">
+          <div class="dropdown dropdown-end hidden md:block">
             <label tabindex="0" class="btn btn-circle avatar hover:border-none">
               <div class="w-10 rounded-full">
                 <img src="./assets/img/user.png" />
@@ -91,6 +91,19 @@
           </div>
         </div>
       </div>
+      <div class="flex justify-center items-center mb-5 md:hidden">
+        <input
+          type="text"
+          placeholder="Search in Shopwave"
+          class="input w-3/4 h-10 rounded-lg bg-white rounded-r-none placeholder:text-gray-600 focus:outline-none border-gray-200 border"
+        />
+        <button
+          class="btn border-none text-white bg-main min-h-[2.5rem] h-10 rounded-l-none hover:bg-demain capitalize"
+        >
+          <i class="fa-solid fa-magnifying-glass text-white"></i>
+          <!-- Search -->
+        </button>
+      </div>
       <div
         class="banner bg-[#55608015] px-8 md:px-14 lg:px-24 flex items-center md:justify-between lg:justify-center py-10"
       >
@@ -103,7 +116,7 @@
             <span class="text-main">20% off</span>
           </h1>
           <div class="coupon flex gap-2 items-center justify-center">
-            <p class="font-medium text-2xl">Use Promo Code</p>
+            <p class="font-medium md:text-2xl">Use Promo Code</p>
             <button
               id="coupon-code"
               class="btn bg-main border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-demain"
@@ -629,23 +642,23 @@
     >
       <div>
         <span class="footer-title">Services</span>
-        <a class="link link-hover">Branding</a>
-        <a class="link link-hover">Design</a>
-        <a class="link link-hover">Marketing</a>
-        <a class="link link-hover">Advertisement</a>
+        <a class="link link-hover hover:text-main">Branding</a>
+        <a class="link link-hover hover:text-main">Design</a>
+        <a class="link link-hover hover:text-main">Marketing</a>
+        <a class="link link-hover hover:text-main">Advertisement</a>
       </div>
       <div>
         <span class="footer-title">Company</span>
-        <a class="link link-hover">About us</a>
-        <a class="link link-hover">Contact</a>
-        <a class="link link-hover">Jobs</a>
-        <a class="link link-hover">Press kit</a>
+        <a class="link link-hover hover:text-main">About us</a>
+        <a class="link link-hover hover:text-main">Contact</a>
+        <a class="link link-hover hover:text-main">Jobs</a>
+        <a class="link link-hover hover:text-main">Press kit</a>
       </div>
       <div>
         <span class="footer-title">Legal</span>
-        <a class="link link-hover">Terms of use</a>
-        <a class="link link-hover">Privacy policy</a>
-        <a class="link link-hover">Cookie policy</a>
+        <a class="link link-hover hover:text-main">Terms of use</a>
+        <a class="link link-hover hover:text-main">Privacy policy</a>
+        <a class="link link-hover hover:text-main">Cookie policy</a>
       </div>
       <div>
         <span class="footer-title">Newsletter</span>
@@ -656,7 +669,8 @@
           <div class="relative">
             <input
               type="text"
-              class="input bg-white h-10 w-full pr-16 focus:outline-none border-gray-200 borde"
+              placeholder="shopwave@email.com"
+              class="input bg-whitish h-10 w-full pr-16 focus:outline-none border-gray-200 borde"
             />
             <button
               class="btn bg-main border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-demain absolute top-0 right-0 rounded-l-none capitalize"
@@ -679,7 +693,9 @@
         /></a>
       </div>
       <div>
-        <p class="font-medium">Copyright © 2023 - All right reserved</p>
+        <p class="font-medium text-md md:text-xl">
+          Copyright © 2023 - All right reserved
+        </p>
       </div>
       <div>
         <div class="grid grid-flow-col gap-4">

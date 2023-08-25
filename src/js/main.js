@@ -106,3 +106,9 @@ document.getElementById("btn-buy").addEventListener("click", function () {
 document.getElementById("btn-home").addEventListener("click", function () {
   location.reload();
 });
+
+/* document
+  .getElementById("coupon-code")
+  .addEventListener("click", function () {
+
+  }); */
